@@ -1,6 +1,9 @@
 # Word-Frames
 Swift extension for UITextField to fetch CGRect of every word via return Array or completion closure.
 
+With completion...
+
+```
 self.textView.wordRects { (word, rect) -> () in
             
    let btn = UIButton(frame: rect)
@@ -10,10 +13,15 @@ self.textView.wordRects { (word, rect) -> () in
     self.textView .addSubview(btn)
             
 }
-        
+```
+
+and with Array return...
+   
+```        
 let wordRects = self.textView.wordRects()
     for rect in wordRects {
     let view = UIView(frame: rect)
     view.backgroundColor = UIColor.randomColor(withAlpha: 0.4)
     self.textView.addSubview(view)
 }
+```
