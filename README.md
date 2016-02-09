@@ -19,7 +19,7 @@ and with Array return...
    
 ```        
 let wordRects = self.textView.wordRects()
-    for rect in wordRects {
+for rect in wordRects {
     let view = UIView(frame: rect)
     view.backgroundColor = UIColor.randomColor(withAlpha: 0.4)
     self.textView.addSubview(view)
